@@ -1,0 +1,32 @@
+{
+    "server_ip": "127.0.0.1",
+    "udp_port": 5005,
+    "tcp_port": 5006,
+    "agents": [
+        {
+            "agent_id": 1,
+            "tasks": [
+                {
+                    "task_id": "task-001",
+                    "metric_type": "latency",
+                    "frequency": 10
+                },
+                {
+                    "task_id": "task-002",
+                    "metric_type": "cpu_usage",
+                    "frequency": 20
+                }
+            ]
+        },
+        {
+            "agent_id": 2,
+            "tasks": [
+                {
+                    "task_id": "task-003",
+                    "metric_type": "bandwidth",
+                    "frequency": 15
+                }
+            ]
+        }
+    ]
+}
