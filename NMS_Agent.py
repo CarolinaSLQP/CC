@@ -50,32 +50,57 @@ def register_agent(agent_id, server_ip, udp_port):
     return False
 
 
-# Enviar métricas com base nas tarefas
 def send_metric(task, agent_id, server_ip, udp_port):
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sequence_num = 1
-    metric_type = task["metric_type"]
+
+    # Mapear task_id e metric_type
+    task_id = int(task["task_id"].split('-')[1])  # Extrai número do ID
+    metric_types = {
+        "latency": 1,
+        "cpu_usage": 2,
+        "bandwidth": 3
+    }
+    metric_type = metric_types[task["metric_type"]]
+
     frequency = task["frequency"]
 
     while True:
-        # Simulação de coleta de métricas
-        metric_value = 100  # Exemplo de valor da métrica
+        metric_value = 100  # Simulação de coleta
         timestamp = int(time.time())
         checksum = sum([2, sequence_num, agent_id, metric_value]) % 256
 
-        # Empacotamento da mensagem
-        message = struct.pack('!BHHHIBIQH', 2, sequence_num, agent_id, checksum, task["task_id"], metric_type,
-                              metric_value, timestamp)
+        # Empacotamento da mensagem corrigido
+        message = struct.pack('!BHHHIBIQH', 2, sequence_num, agent_id, checksum, task_id, metric_type,
+                              metric_value, timestamp, 0)  # Último valor (0) adiciona o campo H
 
-        # Envio e confirmação
+        # Enviar e processar ACK
         sock.sendto(message, (server_ip, udp_port))
         data, _ = sock.recvfrom(1024)
         ack_msg_type, ack_sequence_num, ack_agent_id, ack_checksum = struct.unpack('!BHHH', data)
 
         if ack_msg_type == 3 and ack_sequence_num == sequence_num:
-            print(f"Métrica '{metric_type}' enviada e confirmada.")
+            print(f"Métrica '{task['metric_type']}' enviada e confirmada.")
+
+        # Verificar limite crítico e enviar alerta
+        if metric_value > task["threshold"]:  
+            send_alert(agent_id, metric_type, metric_value, task["threshold"], server_ip, task["tcp_port"])
+
+
         sequence_num += 1
         time.sleep(frequency)
+
+
+# Enviar alerta com base nas tarefas
+def send_alert(agent_id, metric_type, metric_value, threshold, server_ip, tcp_port):
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    try:
+        sock.connect((server_ip, tcp_port))
+        alert_message = struct.pack('!HBBIIQ', agent_id, 1, metric_type, metric_value, threshold, int(time.time()))
+        sock.sendall(alert_message)
+        print(f"Alerta enviado: Métrica {metric_type}, Valor {metric_value}, Limite {threshold}")
+    finally:
+        sock.close()
 
 
 # Inicialização principal
