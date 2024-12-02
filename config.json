@@ -10,13 +10,13 @@
                     "task_id": "task-001",
                     "metric_type": "latency",
                     "frequency": 10,
-                    "threshold": 100
+                    "threshold": 100  
                 },
                 {
                     "task_id": "task-002",
                     "metric_type": "cpu_usage",
                     "frequency": 20,
-                    "threshold": 80
+                    "threshold": 80  
                 }
             ]
         },
@@ -27,7 +27,7 @@
                     "task_id": "task-003",
                     "metric_type": "bandwidth",
                     "frequency": 15,
-                    "threshold": 90
+                    "threshold": 90  
                 }
             ]
         }

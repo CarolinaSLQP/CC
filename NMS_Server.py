@@ -1,8 +1,9 @@
 import socket
 import struct
 import collections
+import json
 
-
+#parsing do json e em vez de dar o valor 100, calcular a latência
 
 # Configurações do servidor
 UDP_PORT = 5005
@@ -14,6 +15,19 @@ sequence_history = collections.defaultdict(lambda: collections.deque(maxlen=100)
 # Função para calcular um checksum simples
 def calculate_checksum(data):
     return sum(data) % 256
+
+# Função para salvar métricas recebidas
+def save_metric(agent_id, task_id, metric_type, metric_value, timestamp):
+    data = {
+        "agent_id": agent_id,
+        "task_id": task_id,
+        "metric_type": metric_type,
+        "metric_value": metric_value,
+        "timestamp": timestamp
+    }
+    with open("metrics.json", "a") as file:
+        json.dump(data, file)
+        file.write("\n")  # Nova linha para cada entrada de métrica
 
 
 # Função para escutar e responder a registros e métricas via UDP
@@ -52,15 +66,15 @@ def listen_udp():
                 continue
 
         elif msg_type == 2:  # Métrica
-            # Garantir que o pacote de métrica tem o tamanho correto (26 bytes)
-            if len(data) != 26:
+            if len(data) != 26:  # Verifica o tamanho necessário para o formato completo
                 print(f"Pacote de métrica incompleto recebido (tamanho {len(data)}): {data}")
                 continue
 
             # Desempacotar o pacote de métrica
             try:
                 _, sequence_num, agent_id, checksum, task_id, metric_type, metric_value, timestamp, _ = struct.unpack(
-                    '!BHHHIBIQH', data)
+                '!BHHHIBIQH', data)
+
                 if sequence_num in sequence_history[agent_id]:
                     print(f"Pacote duplicado ignorado do agente {agent_id}, sequência {sequence_num}")
                     continue
@@ -71,14 +85,16 @@ def listen_udp():
                 # Processar métrica
                 print(f"Métrica recebida - Agente: {agent_id}, Tipo: {metric_type}, Valor: {metric_value}, Timestamp: {timestamp}")
 
+                # Salvar a métrica no arquivo
+                save_metric(agent_id, task_id, metric_type, metric_value, timestamp)
+
                 # Enviar ACK
                 ack_message = struct.pack('!BHHH', 3, sequence_num, agent_id,
-                                          calculate_checksum([3, sequence_num, agent_id]))
+                                  calculate_checksum([3, sequence_num, agent_id]))
                 sock.sendto(ack_message, addr)
             except struct.error as e:
                 print(f"Erro ao desempacotar métrica: {e}, pacote: {data}")
                 continue
-
         else:
             print(f"Tipo de mensagem desconhecido: {msg_type}, pacote: {data}")
 
@@ -109,6 +125,7 @@ def listen_tcp():
                 print(f"Erro ao desempacotar alerta: {e}, pacote: {data}")
         
         conn.close()
+
 
 
 

@@ -4,6 +4,7 @@ import socket
 import struct
 import time
 import threading
+from ping3 import ping
 
 
 # Função para carregar as configurações de um agente específico
@@ -66,13 +67,23 @@ def send_metric(task, agent_id, server_ip, udp_port):
     frequency = task["frequency"]
 
     while True:
-        metric_value = 100  # Simulação de coleta
+        # Calcular a latência para o endereço do servidor
+        try:
+            latency = ping(server_ip)  # Retorna o tempo em segundos
+            if latency is None:
+                metric_value = -1  # Indica que o destino está inacessível
+            else:
+                metric_value = int(latency * 1000)  # Converte para milissegundos
+        except Exception as e:
+            print(f"Erro ao calcular latência: {e}")
+            metric_value = -1  # Define como -1 em caso de erro
+
         timestamp = int(time.time())
         checksum = sum([2, sequence_num, agent_id, metric_value]) % 256
 
         # Empacotamento da mensagem corrigido
         message = struct.pack('!BHHHIBIQH', 2, sequence_num, agent_id, checksum, task_id, metric_type,
-                              metric_value, timestamp, 0)  # Último valor (0) adiciona o campo H
+                          metric_value, timestamp, 0)
 
         # Enviar e processar ACK
         sock.sendto(message, (server_ip, udp_port))
@@ -80,16 +91,14 @@ def send_metric(task, agent_id, server_ip, udp_port):
         ack_msg_type, ack_sequence_num, ack_agent_id, ack_checksum = struct.unpack('!BHHH', data)
 
         if ack_msg_type == 3 and ack_sequence_num == sequence_num:
-            print(f"Métrica '{task['metric_type']}' enviada e confirmada.")
+            print(f"Métrica '{task['metric_type']}' enviada e confirmada: Latência = {metric_value} ms.")
 
         # Verificar limite crítico e enviar alerta
-        if metric_value > task["threshold"]:  
+        if metric_value > task["threshold"]:  # Usa o limite do JSON
             send_alert(agent_id, metric_type, metric_value, task["threshold"], server_ip, task["tcp_port"])
-
 
         sequence_num += 1
         time.sleep(frequency)
-
 
 # Enviar alerta com base nas tarefas
 def send_alert(agent_id, metric_type, metric_value, threshold, server_ip, tcp_port):
@@ -101,6 +110,7 @@ def send_alert(agent_id, metric_type, metric_value, threshold, server_ip, tcp_po
         print(f"Alerta enviado: Métrica {metric_type}, Valor {metric_value}, Limite {threshold}")
     finally:
         sock.close()
+
 
 
 # Inicialização principal
