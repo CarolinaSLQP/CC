@@ -88,11 +88,29 @@ def send_metric(task, agent_id, server_ip, udp_port):
         # Enviar e processar ACK
         sock.sendto(message, (server_ip, udp_port))
         data, _ = sock.recvfrom(1024)
-        ack_msg_type, ack_sequence_num, ack_agent_id, ack_checksum = struct.unpack('!BHHH', data)
+        if len(data) == 8:  # Verifica se o buffer tem o tamanho correto
+            ack_msg_type, ack_sequence_num, ack_agent_id, ack_checksum, flow_control_flag = struct.unpack('!BHHHB', data)
+            if ack_msg_type == 3 and ack_sequence_num == sequence_num:
+                print(f"Métrica '{task['metric_type']}' enviada e confirmada.")
+
+                # Ajustar a frequência com base no controle de fluxo
+                if flow_control_flag == 1:
+                    print("Controle de fluxo recebido: reduzindo frequência de envio.")
+                    frequency += 5  # Aumenta o intervalo de envio
+        else:
+            print(f"ACK inválido recebido: {data}")
+
 
         if ack_msg_type == 3 and ack_sequence_num == sequence_num:
-            print(f"Métrica '{task['metric_type']}' enviada e confirmada: Latência = {metric_value} ms.")
+            print(f"Métrica '{task['metric_type']}' enviada e confirmada.")
 
+            # Ajustar a frequência com base no controle de fluxo
+            if flow_control_flag == 1:
+                print("Controle de fluxo recebido: reduzindo frequência de envio.")
+                frequency += 5  # Aumenta o intervalo de envio (por exemplo, +5 segundos)
+
+
+        
         # Verificar limite crítico e enviar alerta
         if metric_value > task["threshold"]:  # Usa o limite do JSON
             send_alert(agent_id, metric_type, metric_value, task["threshold"], server_ip, task["tcp_port"])

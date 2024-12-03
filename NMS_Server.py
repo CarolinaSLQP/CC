@@ -3,8 +3,6 @@ import struct
 import collections
 import json
 
-#parsing do json e em vez de dar o valor 100, calcular a latência
-
 # Configurações do servidor
 UDP_PORT = 5005
 TCP_PORT = 5006
@@ -25,10 +23,46 @@ def save_metric(agent_id, task_id, metric_type, metric_value, timestamp):
         "metric_value": metric_value,
         "timestamp": timestamp
     }
-    with open("metrics.json", "a") as file:
-        json.dump(data, file)
-        file.write("\n")  # Nova linha para cada entrada de métrica
 
+    # Ler o arquivo existente ou criar uma nova lista
+    try:
+        with open("metrics.json", "r") as file:
+            metrics = json.load(file)  # Carregar dados existentes
+    except (FileNotFoundError, json.JSONDecodeError):
+        metrics = []  # Iniciar nova lista se o arquivo não existir ou estiver vazio
+
+    # Adicionar a nova métrica
+    metrics.append(data)
+
+    # Escrever a lista atualizada no arquivo
+    with open("metrics.json", "w") as file:
+        json.dump(metrics, file, indent=4)  # Salvar no formato JSON
+
+# Função para salvar alertas recebidos
+def save_alert(agent_id, metric_type, metric_value, threshold, timestamp):
+    # Estrutura do alerta
+    alert_data = {
+        "agent_id": agent_id,
+        "metric_type": metric_type,
+        "metric_value": metric_value,
+        "threshold": threshold,
+        "timestamp": timestamp
+    }
+
+    # Ler o arquivo existente ou criar uma nova lista
+    try:
+        with open("alerts.json", "r") as file:
+            alerts = json.load(file)  # Carregar dados existentes
+    except (FileNotFoundError, json.JSONDecodeError):
+        alerts = []  # Iniciar nova lista se o arquivo não existir ou estiver vazio
+
+    # Adicionar o novo alerta
+    alerts.append(alert_data)
+
+    # Escrever a lista atualizada no arquivo
+    with open("alerts.json", "w") as file:
+        json.dump(alerts, file, indent=4)  # Salvar no formato JSON
+    print(f"Alerta salvo: {alert_data}")
 
 # Função para escutar e responder a registros e métricas via UDP
 def listen_udp():
@@ -88,17 +122,23 @@ def listen_udp():
                 # Salvar a métrica no arquivo
                 save_metric(agent_id, task_id, metric_type, metric_value, timestamp)
 
-                # Enviar ACK
-                ack_message = struct.pack('!BHHH', 3, sequence_num, agent_id,
-                                  calculate_checksum([3, sequence_num, agent_id]))
+                # Lógica para determinar sobrecarga
+                too_much_traffic = len(sequence_history[agent_id]) > 5
+                
+                # Gerar o ACK com sinal de controle de fluxo
+                flow_control_flag = 1 if too_much_traffic else 0
+                ack_message = struct.pack('!BHHHB', 3, sequence_num, agent_id,
+                          calculate_checksum([3, sequence_num, agent_id]), flow_control_flag)
                 sock.sendto(ack_message, addr)
+
+                if flow_control_flag == 1:
+                    print(f"Controle de fluxo ativado para o agente {agent_id}: reduzir frequência de envio.")
+                    
             except struct.error as e:
                 print(f"Erro ao desempacotar métrica: {e}, pacote: {data}")
                 continue
         else:
             print(f"Tipo de mensagem desconhecido: {msg_type}, pacote: {data}")
-
-
 
 # Escutar alertas via TCP
 def listen_tcp():
@@ -118,16 +158,16 @@ def listen_tcp():
             try:
                 # Desempacotar os dados do alerta
                 agent_id, alert_type, metric_type, metric_value, threshold, timestamp = struct.unpack('!HBBIIQ', data)
-                print(f"Alerta recebido do Agente {agent_id} - Tipo: {alert_type}, "
-                      f"Métrica: {metric_type}, Valor: {metric_value}, "
-                      f"Limite: {threshold}, Timestamp: {timestamp}")
+                print(f"Alerta recebido do Agente {agent_id} - Tipo: {metric_type}, "
+                      f"Valor: {metric_value}, Limite: {threshold}, Timestamp: {timestamp}")
+
+                # Salvar o alerta no arquivo
+                save_alert(agent_id, metric_type, metric_value, threshold, timestamp)
+
             except struct.error as e:
                 print(f"Erro ao desempacotar alerta: {e}, pacote: {data}")
         
         conn.close()
-
-
-
 
 # Executando o servidor
 import threading

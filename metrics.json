@@ -1,165 +1,72 @@
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150034}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150044}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150054}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150064}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150074}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150084}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150094}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150104}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150114}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150124}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150134}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150144}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150154}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150164}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150174}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150184}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150194}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150204}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150214}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150224}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150234}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150244}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150254}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150264}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150274}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150284}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150294}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150304}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150314}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150324}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150334}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150344}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150354}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150364}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150374}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150384}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150394}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150404}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150414}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150424}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150434}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150444}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150454}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150464}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150474}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150484}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150494}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150504}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150514}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150524}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150534}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150544}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150554}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150564}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150574}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150584}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150594}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150604}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150614}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150624}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150963}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150973}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150983}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733150993}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151003}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151013}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151023}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151033}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151043}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151053}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151063}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151073}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151083}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151093}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151103}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151113}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151123}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151133}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151143}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151153}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151163}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151173}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151183}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151193}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151203}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151213}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151223}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151233}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151243}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151253}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151263}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151273}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151283}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151293}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151303}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151313}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151323}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151333}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 100, "timestamp": 1733151343}
-{"agent_id": 1, "task_id": 2, "metric_type": 2, "metric_value": 100, "timestamp": 1733153453}
-{"agent_id": 1, "task_id": 2, "metric_type": 2, "metric_value": 100, "timestamp": 1733153473}
-{"agent_id": 1, "task_id": 2, "metric_type": 2, "metric_value": 100, "timestamp": 1733153493}
-{"agent_id": 1, "task_id": 2, "metric_type": 2, "metric_value": 100, "timestamp": 1733153700}
-{"agent_id": 1, "task_id": 2, "metric_type": 2, "metric_value": 100, "timestamp": 1733153720}
-{"agent_id": 1, "task_id": 2, "metric_type": 2, "metric_value": 100, "timestamp": 1733153740}
-{"agent_id": 1, "task_id": 2, "metric_type": 2, "metric_value": 100, "timestamp": 1733153760}
-{"agent_id": 1, "task_id": 2, "metric_type": 2, "metric_value": 100, "timestamp": 1733153780}
-{"agent_id": 1, "task_id": 2, "metric_type": 2, "metric_value": 100, "timestamp": 1733153800}
-{"agent_id": 1, "task_id": 2, "metric_type": 2, "metric_value": 100, "timestamp": 1733153820}
-{"agent_id": 1, "task_id": 2, "metric_type": 2, "metric_value": 100, "timestamp": 1733153840}
-{"agent_id": 1, "task_id": 2, "metric_type": 2, "metric_value": 100, "timestamp": 1733153860}
-{"agent_id": 1, "task_id": 2, "metric_type": 2, "metric_value": 100, "timestamp": 1733153880}
-{"agent_id": 1, "task_id": 2, "metric_type": 2, "metric_value": 100, "timestamp": 1733153900}
-{"agent_id": 1, "task_id": 2, "metric_type": 2, "metric_value": 100, "timestamp": 1733153920}
-{"agent_id": 1, "task_id": 2, "metric_type": 2, "metric_value": 100, "timestamp": 1733153940}
-{"agent_id": 1, "task_id": 2, "metric_type": 2, "metric_value": 100, "timestamp": 1733153960}
-{"agent_id": 1, "task_id": 2, "metric_type": 2, "metric_value": 100, "timestamp": 1733153980}
-{"agent_id": 1, "task_id": 2, "metric_type": 2, "metric_value": 100, "timestamp": 1733154000}
-{"agent_id": 1, "task_id": 2, "metric_type": 2, "metric_value": 100, "timestamp": 1733154020}
-{"agent_id": 1, "task_id": 2, "metric_type": 2, "metric_value": 100, "timestamp": 1733154040}
-{"agent_id": 1, "task_id": 2, "metric_type": 2, "metric_value": 100, "timestamp": 1733154060}
-{"agent_id": 1, "task_id": 2, "metric_type": 2, "metric_value": 100, "timestamp": 1733154080}
-{"agent_id": 1, "task_id": 2, "metric_type": 2, "metric_value": 100, "timestamp": 1733154100}
-{"agent_id": 1, "task_id": 2, "metric_type": 2, "metric_value": 100, "timestamp": 1733154120}
-{"agent_id": 1, "task_id": 2, "metric_type": 2, "metric_value": 100, "timestamp": 1733154140}
-{"agent_id": 1, "task_id": 2, "metric_type": 2, "metric_value": 100, "timestamp": 1733154161}
-{"agent_id": 1, "task_id": 2, "metric_type": 2, "metric_value": 100, "timestamp": 1733154181}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154235}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154245}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154255}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154265}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154275}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154285}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154295}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154305}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154315}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154325}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154335}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154345}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 1, "timestamp": 1733154355}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154365}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154375}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154385}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154395}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154405}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154415}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154425}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154435}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154445}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154455}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154465}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 2, "timestamp": 1733154475}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154485}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154495}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154534}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154544}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154554}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154564}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154574}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154584}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154594}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154604}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154614}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 0, "timestamp": 1733154624}
-{"agent_id": 1, "task_id": 1, "metric_type": 1, "metric_value": 1, "timestamp": 1733154634}
+[
+    {
+        "agent_id": 1,
+        "task_id": 1,
+        "metric_type": 1,
+        "metric_value": 0,
+        "timestamp": 1733184943
+    },
+    {
+        "agent_id": 1,
+        "task_id": 1,
+        "metric_type": 1,
+        "metric_value": 0,
+        "timestamp": 1733184953
+    },
+    {
+        "agent_id": 1,
+        "task_id": 2,
+        "metric_type": 2,
+        "metric_value": 0,
+        "timestamp": 1733186744
+    },
+    {
+        "agent_id": 1,
+        "task_id": 2,
+        "metric_type": 2,
+        "metric_value": 0,
+        "timestamp": 1733186764
+    },
+    {
+        "agent_id": 1,
+        "task_id": 2,
+        "metric_type": 2,
+        "metric_value": 0,
+        "timestamp": 1733186784
+    },
+    {
+        "agent_id": 1,
+        "task_id": 2,
+        "metric_type": 2,
+        "metric_value": 1,
+        "timestamp": 1733186804
+    },
+    {
+        "agent_id": 1,
+        "task_id": 2,
+        "metric_type": 2,
+        "metric_value": 0,
+        "timestamp": 1733186824
+    },
+    {
+        "agent_id": 1,
+        "task_id": 2,
+        "metric_type": 2,
+        "metric_value": 0,
+        "timestamp": 1733186844
+    },
+    {
+        "agent_id": 1,
+        "task_id": 2,
+        "metric_type": 2,
+        "metric_value": 0,
+        "timestamp": 1733186874
+    },
+    {
+        "agent_id": 1,
+        "task_id": 2,
+        "metric_type": 2,
+        "metric_value": 0,
+        "timestamp": 1733186914
+    }
+]
