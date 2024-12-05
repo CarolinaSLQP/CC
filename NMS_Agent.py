@@ -122,12 +122,16 @@ def send_metric(task, agent_id, server_ip, udp_port):
 def send_alert(agent_id, metric_type, metric_value, threshold, server_ip, tcp_port):
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     try:
+        print(f"Preparando alerta: Agente {agent_id}, Métrica {metric_type}, Valor {metric_value}, Limite {threshold}")
         sock.connect((server_ip, tcp_port))
         alert_message = struct.pack('!HBBIIQ', agent_id, 1, metric_type, metric_value, threshold, int(time.time()))
         sock.sendall(alert_message)
-        print(f"Alerta enviado: Métrica {metric_type}, Valor {metric_value}, Limite {threshold}")
+        print(f"Alerta enviado: Agente {agent_id}, Métrica {metric_type}, Valor {metric_value}, Limite {threshold}")
+    except Exception as e:
+        print(f"Erro ao enviar alerta: {e}")
     finally:
         sock.close()
+
 
 
 

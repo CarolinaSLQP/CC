@@ -68,5 +68,446 @@
         "metric_type": 2,
         "metric_value": 0,
         "timestamp": 1733186914
+    },
+    {
+        "agent_id": 1,
+        "task_id": 1,
+        "metric_type": 1,
+        "metric_value": 0,
+        "timestamp": 1733310848
+    },
+    {
+        "agent_id": 1,
+        "task_id": 1,
+        "metric_type": 1,
+        "metric_value": 0,
+        "timestamp": 1733310858
+    },
+    {
+        "agent_id": 1,
+        "task_id": 1,
+        "metric_type": 1,
+        "metric_value": 0,
+        "timestamp": 1733310868
+    },
+    {
+        "agent_id": 1,
+        "task_id": 1,
+        "metric_type": 1,
+        "metric_value": 0,
+        "timestamp": 1733310878
+    },
+    {
+        "agent_id": 1,
+        "task_id": 1,
+        "metric_type": 1,
+        "metric_value": 0,
+        "timestamp": 1733310888
+    },
+    {
+        "agent_id": 1,
+        "task_id": 1,
+        "metric_type": 1,
+        "metric_value": 0,
+        "timestamp": 1733310898
+    },
+    {
+        "agent_id": 2,
+        "task_id": 3,
+        "metric_type": 3,
+        "metric_value": 1,
+        "timestamp": 1733310911
+    },
+    {
+        "agent_id": 1,
+        "task_id": 1,
+        "metric_type": 1,
+        "metric_value": 0,
+        "timestamp": 1733310918
+    },
+    {
+        "agent_id": 2,
+        "task_id": 3,
+        "metric_type": 3,
+        "metric_value": 0,
+        "timestamp": 1733310926
+    },
+    {
+        "agent_id": 2,
+        "task_id": 3,
+        "metric_type": 3,
+        "metric_value": 0,
+        "timestamp": 1733310941
+    },
+    {
+        "agent_id": 1,
+        "task_id": 1,
+        "metric_type": 1,
+        "metric_value": 0,
+        "timestamp": 1733310948
+    },
+    {
+        "agent_id": 2,
+        "task_id": 3,
+        "metric_type": 3,
+        "metric_value": 0,
+        "timestamp": 1733310956
+    },
+    {
+        "agent_id": 2,
+        "task_id": 3,
+        "metric_type": 3,
+        "metric_value": 0,
+        "timestamp": 1733310971
+    },
+    {
+        "agent_id": 2,
+        "task_id": 3,
+        "metric_type": 3,
+        "metric_value": 0,
+        "timestamp": 1733310986
+    },
+    {
+        "agent_id": 1,
+        "task_id": 1,
+        "metric_type": 1,
+        "metric_value": 0,
+        "timestamp": 1733310988
+    },
+    {
+        "agent_id": 2,
+        "task_id": 3,
+        "metric_type": 3,
+        "metric_value": 0,
+        "timestamp": 1733311011
+    },
+    {
+        "agent_id": 1,
+        "task_id": 1,
+        "metric_type": 1,
+        "metric_value": 0,
+        "timestamp": 1733311038
+    },
+    {
+        "agent_id": 2,
+        "task_id": 3,
+        "metric_type": 3,
+        "metric_value": 0,
+        "timestamp": 1733311046
+    },
+    {
+        "agent_id": 2,
+        "task_id": 3,
+        "metric_type": 3,
+        "metric_value": 0,
+        "timestamp": 1733311091
+    },
+    {
+        "agent_id": 1,
+        "task_id": 1,
+        "metric_type": 1,
+        "metric_value": 0,
+        "timestamp": 1733311098
+    },
+    {
+        "agent_id": 2,
+        "task_id": 3,
+        "metric_type": 3,
+        "metric_value": 0,
+        "timestamp": 1733311146
+    },
+    {
+        "agent_id": 1,
+        "task_id": 1,
+        "metric_type": 1,
+        "metric_value": 0,
+        "timestamp": 1733311168
+    },
+    {
+        "agent_id": 2,
+        "task_id": 3,
+        "metric_type": 3,
+        "metric_value": 0,
+        "timestamp": 1733311211
+    },
+    {
+        "agent_id": 1,
+        "task_id": 1,
+        "metric_type": 1,
+        "metric_value": 0,
+        "timestamp": 1733311248
+    },
+    {
+        "agent_id": 2,
+        "task_id": 3,
+        "metric_type": 3,
+        "metric_value": 0,
+        "timestamp": 1733311290
+    },
+    {
+        "agent_id": 1,
+        "task_id": 1,
+        "metric_type": 1,
+        "metric_value": 0,
+        "timestamp": 1733311341
+    },
+    {
+        "agent_id": 2,
+        "task_id": 3,
+        "metric_type": 3,
+        "metric_value": 1,
+        "timestamp": 1733311375
+    },
+    {
+        "agent_id": 1,
+        "task_id": 1,
+        "metric_type": 1,
+        "metric_value": 0,
+        "timestamp": 1733311441
+    },
+    {
+        "agent_id": 2,
+        "task_id": 3,
+        "metric_type": 3,
+        "metric_value": 0,
+        "timestamp": 1733311470
+    },
+    {
+        "agent_id": 1,
+        "task_id": 1,
+        "metric_type": 1,
+        "metric_value": 0,
+        "timestamp": 1733311551
+    },
+    {
+        "agent_id": 2,
+        "task_id": 3,
+        "metric_type": 3,
+        "metric_value": 0,
+        "timestamp": 1733311575
+    },
+    {
+        "agent_id": 1,
+        "task_id": 1,
+        "metric_type": 1,
+        "metric_value": 0,
+        "timestamp": 1733311671
+    },
+    {
+        "agent_id": 2,
+        "task_id": 3,
+        "metric_type": 3,
+        "metric_value": 0,
+        "timestamp": 1733311690
+    },
+    {
+        "agent_id": 1,
+        "task_id": 1,
+        "metric_type": 1,
+        "metric_value": 0,
+        "timestamp": 1733311801
+    },
+    {
+        "agent_id": 1,
+        "task_id": 2,
+        "metric_type": 2,
+        "metric_value": 2,
+        "timestamp": 1733397180
+    },
+    {
+        "agent_id": 1,
+        "task_id": 2,
+        "metric_type": 2,
+        "metric_value": 0,
+        "timestamp": 1733397200
+    },
+    {
+        "agent_id": 2,
+        "task_id": 3,
+        "metric_type": 3,
+        "metric_value": 0,
+        "timestamp": 1733397220
+    },
+    {
+        "agent_id": 1,
+        "task_id": 2,
+        "metric_type": 2,
+        "metric_value": 0,
+        "timestamp": 1733397220
+    },
+    {
+        "agent_id": 2,
+        "task_id": 3,
+        "metric_type": 3,
+        "metric_value": 0,
+        "timestamp": 1733397235
+    },
+    {
+        "agent_id": 1,
+        "task_id": 2,
+        "metric_type": 2,
+        "metric_value": 0,
+        "timestamp": 1733397240
+    },
+    {
+        "agent_id": 2,
+        "task_id": 3,
+        "metric_type": 3,
+        "metric_value": 0,
+        "timestamp": 1733397250
+    },
+    {
+        "agent_id": 1,
+        "task_id": 2,
+        "metric_type": 2,
+        "metric_value": 0,
+        "timestamp": 1733397260
+    },
+    {
+        "agent_id": 2,
+        "task_id": 3,
+        "metric_type": 3,
+        "metric_value": 0,
+        "timestamp": 1733397265
+    },
+    {
+        "agent_id": 2,
+        "task_id": 3,
+        "metric_type": 3,
+        "metric_value": 0,
+        "timestamp": 1733397280
+    },
+    {
+        "agent_id": 1,
+        "task_id": 2,
+        "metric_type": 2,
+        "metric_value": 0,
+        "timestamp": 1733397280
+    },
+    {
+        "agent_id": 2,
+        "task_id": 3,
+        "metric_type": 3,
+        "metric_value": 0,
+        "timestamp": 1733397295
+    },
+    {
+        "agent_id": 1,
+        "task_id": 2,
+        "metric_type": 2,
+        "metric_value": 0,
+        "timestamp": 1733397310
+    },
+    {
+        "agent_id": 2,
+        "task_id": 3,
+        "metric_type": 3,
+        "metric_value": 0,
+        "timestamp": 1733397320
+    },
+    {
+        "agent_id": 1,
+        "task_id": 2,
+        "metric_type": 2,
+        "metric_value": 0,
+        "timestamp": 1733397350
+    },
+    {
+        "agent_id": 2,
+        "task_id": 3,
+        "metric_type": 3,
+        "metric_value": 0,
+        "timestamp": 1733397355
+    },
+    {
+        "agent_id": 2,
+        "task_id": 3,
+        "metric_type": 3,
+        "metric_value": 0,
+        "timestamp": 1733397400
+    },
+    {
+        "agent_id": 1,
+        "task_id": 2,
+        "metric_type": 2,
+        "metric_value": 0,
+        "timestamp": 1733397401
+    },
+    {
+        "agent_id": 2,
+        "task_id": 3,
+        "metric_type": 3,
+        "metric_value": 0,
+        "timestamp": 1733397455
+    },
+    {
+        "agent_id": 1,
+        "task_id": 2,
+        "metric_type": 2,
+        "metric_value": 0,
+        "timestamp": 1733397461
+    },
+    {
+        "agent_id": 2,
+        "task_id": 3,
+        "metric_type": 3,
+        "metric_value": 0,
+        "timestamp": 1733397520
+    },
+    {
+        "agent_id": 1,
+        "task_id": 2,
+        "metric_type": 2,
+        "metric_value": 0,
+        "timestamp": 1733397531
+    },
+    {
+        "agent_id": 2,
+        "task_id": 3,
+        "metric_type": 3,
+        "metric_value": 0,
+        "timestamp": 1733397595
+    },
+    {
+        "agent_id": 1,
+        "task_id": 2,
+        "metric_type": 2,
+        "metric_value": 0,
+        "timestamp": 1733397611
+    },
+    {
+        "agent_id": 2,
+        "task_id": 3,
+        "metric_type": 3,
+        "metric_value": 1,
+        "timestamp": 1733397680
+    },
+    {
+        "agent_id": 1,
+        "task_id": 2,
+        "metric_type": 2,
+        "metric_value": 0,
+        "timestamp": 1733397701
+    },
+    {
+        "agent_id": 1,
+        "task_id": 1,
+        "metric_type": 1,
+        "metric_value": 0,
+        "timestamp": 1733397833
+    },
+    {
+        "agent_id": 1,
+        "task_id": 1,
+        "metric_type": 1,
+        "metric_value": 0,
+        "timestamp": 1733397843
+    },
+    {
+        "agent_id": 1,
+        "task_id": 1,
+        "metric_type": 1,
+        "metric_value": 0,
+        "timestamp": 1733397853
     }
 ]

@@ -169,6 +169,7 @@ def listen_tcp():
         
         conn.close()
 
+
 # Executando o servidor
 import threading
 

@@ -1,5 +1,5 @@
 {
-    "server_ip": "127.0.0.1",
+    "server_ip": "10.0.5.10",
     "udp_port": 5005,
     "tcp_port": 5006,
     "agents": [
@@ -10,13 +10,13 @@
                     "task_id": "task-001",
                     "metric_type": "latency",
                     "frequency": 10,
-                    "threshold": 100  
+                    "threshold": 40  
                 },
                 {
                     "task_id": "task-002",
                     "metric_type": "cpu_usage",
                     "frequency": 20,
-                    "threshold": 80  
+                    "threshold": 30  
                 }
             ]
         },
