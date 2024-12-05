@@ -1,0 +1,177 @@
+[
+    {
+        "agent_id": 1,
+        "metric_type": 1,
+        "metric_value": 42,
+        "threshold": 40,
+        "timestamp": 1733399507
+    },
+    {
+        "agent_id": 1,
+        "metric_type": 1,
+        "metric_value": 44,
+        "threshold": 40,
+        "timestamp": 1733399517
+    },
+    {
+        "agent_id": 1,
+        "metric_type": 1,
+        "metric_value": 42,
+        "threshold": 40,
+        "timestamp": 1733399527
+    },
+    {
+        "agent_id": 1,
+        "metric_type": 2,
+        "metric_value": 44,
+        "threshold": 30,
+        "timestamp": 1733399590
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 12,
+        "threshold": 10,
+        "timestamp": 1733400208
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 11,
+        "threshold": 10,
+        "timestamp": 1733400223
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 11,
+        "threshold": 10,
+        "timestamp": 1733400238
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 11,
+        "threshold": 10,
+        "timestamp": 1733400253
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 11,
+        "threshold": 10,
+        "timestamp": 1733400268
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 11,
+        "threshold": 10,
+        "timestamp": 1733400283
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 13,
+        "threshold": 10,
+        "timestamp": 1733400308
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 11,
+        "threshold": 10,
+        "timestamp": 1733400343
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 12,
+        "threshold": 10,
+        "timestamp": 1733400388
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 11,
+        "threshold": 10,
+        "timestamp": 1733400443
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 11,
+        "threshold": 10,
+        "timestamp": 1733400509
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 11,
+        "threshold": 10,
+        "timestamp": 1733400584
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 11,
+        "threshold": 10,
+        "timestamp": 1733400669
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 12,
+        "threshold": 10,
+        "timestamp": 1733400764
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 12,
+        "threshold": 10,
+        "timestamp": 1733400869
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 16,
+        "threshold": 10,
+        "timestamp": 1733400984
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 11,
+        "threshold": 10,
+        "timestamp": 1733401109
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 11,
+        "threshold": 10,
+        "timestamp": 1733401244
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 11,
+        "threshold": 10,
+        "timestamp": 1733401390
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 11,
+        "threshold": 10,
+        "timestamp": 1733401545
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 13,
+        "threshold": 10,
+        "timestamp": 1733401710
+    }
+]
