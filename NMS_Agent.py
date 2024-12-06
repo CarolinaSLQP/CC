@@ -6,7 +6,6 @@ import time
 import threading
 from ping3 import ping
 
-
 # Função para carregar as configurações de um agente específico
 def load_agent_config(config_file, agent_id):
     with open(config_file, "r") as file:
@@ -50,8 +49,46 @@ def register_agent(agent_id, server_ip, udp_port):
     print(f"Registro falhou para o agente com ID: {agent_id}")
     return False
 
-
+# Função que envia as métricas
 def send_metric(task, agent_id, server_ip, udp_port):
+    import psutil
+    import subprocess
+
+    def calculate_cpu_usage():
+        """
+        Função para calcular a utilização do CPU como um valor percentual.
+        """
+        try:
+            return int(psutil.cpu_percent(interval=1))  # Percentual médio do uso da CPU
+        except Exception as e:
+            print(f"Erro ao calcular CPU usage: {e}")
+            return -1
+
+    def calculate_bandwidth(server_ip, duration=5):
+        """
+        Função para calcular a largura de banda usando iPerf.
+        """
+        try:
+            command = ["iperf3", "-c", server_ip, "-t", str(duration), "-f", "m"]
+            result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+
+            if result.returncode != 0:
+                print(f"Erro ao executar iPerf: {result.stderr}")
+                return -1  # Retorna -1 se houver erro
+
+            for line in result.stdout.splitlines():
+                if "sender" in line or "receiver" in line:
+                    parts = line.split()
+                    if "Mbits/sec" in parts or "Gbits/sec" in parts:
+                        index = parts.index("Mbits/sec") if "Mbits/sec" in parts else parts.index("Gbits/sec")
+                        bandwidth = float(parts[index - 1])
+                        if "Gbits/sec" in parts:
+                            bandwidth *= 1000  # Converte Gbps para Mbps
+                        return int(bandwidth)
+        except Exception as e:
+            print(f"Erro ao calcular largura de banda: {e}")
+            return -1
+
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sequence_num = 1
 
@@ -67,56 +104,54 @@ def send_metric(task, agent_id, server_ip, udp_port):
     frequency = task["frequency"]
 
     while True:
-        # Calcular a latência para o endereço do servidor
         try:
-            latency = ping(server_ip)  # Retorna o tempo em segundos
-            if latency is None:
-                metric_value = -1  # Indica que o destino está inacessível
+            # Verifica o tipo de métrica e calcula o valor
+            if task["metric_type"] == "latency":
+                latency = ping(server_ip)  # Calcula latência
+                metric_value = int(latency * 1000) if latency is not None else -1
+            elif task["metric_type"] == "cpu_usage":
+                metric_value = calculate_cpu_usage()  
+            elif task["metric_type"] == "bandwidth":
+                metric_value = calculate_bandwidth(server_ip)  
+
+            # Verifica se o cálculo falhou
+            if metric_value == -1:
+                print(f"Erro ao calcular métrica '{task['metric_type']}'. Ignorando envio.")
+                continue
+
+            # Empacotamento e envio da métrica
+            timestamp = int(time.time())
+            checksum = sum([2, sequence_num, agent_id, metric_value]) % 256
+
+            message = struct.pack('!BHHHIBIQH', 2, sequence_num, agent_id, checksum, task_id, metric_type,
+                                  metric_value, timestamp, 0)
+
+            # Enviar mensagem via UDP
+            sock.sendto(message, (server_ip, udp_port))
+            data, _ = sock.recvfrom(1024)
+            if len(data) == 8:
+                ack_msg_type, ack_sequence_num, ack_agent_id, ack_checksum, flow_control_flag = struct.unpack('!BHHHB', data)
+                if ack_msg_type == 3 and ack_sequence_num == sequence_num:
+                    print(f"Métrica '{task['metric_type']}' enviada e confirmada.")
+
+                    # Ajustar frequência com base no controle de fluxo
+                    if flow_control_flag == 1:
+                        print("Controle de fluxo recebido: reduzindo frequência de envio.")
+                        frequency += 5  # Aumenta o intervalo de envio
             else:
-                metric_value = int(latency * 1000)  # Converte para milissegundos
+                print(f"ACK inválido recebido: {data}")
+
+            # Verificar limite crítico e enviar alerta
+            if metric_value > task["threshold"]:
+                send_alert(agent_id, metric_type, metric_value, task["threshold"], server_ip, task["tcp_port"])
+
+            sequence_num += 1
+            time.sleep(frequency)
+
         except Exception as e:
-            print(f"Erro ao calcular latência: {e}")
-            metric_value = -1  # Define como -1 em caso de erro
+            print(f"Erro na execução da tarefa '{task['metric_type']}': {e}")
+            break
 
-        timestamp = int(time.time())
-        checksum = sum([2, sequence_num, agent_id, metric_value]) % 256
-
-        # Empacotamento da mensagem corrigido
-        message = struct.pack('!BHHHIBIQH', 2, sequence_num, agent_id, checksum, task_id, metric_type,
-                          metric_value, timestamp, 0)
-
-        # Enviar e processar ACK
-        sock.sendto(message, (server_ip, udp_port))
-        data, _ = sock.recvfrom(1024)
-        if len(data) == 8:  # Verifica se o buffer tem o tamanho correto
-            ack_msg_type, ack_sequence_num, ack_agent_id, ack_checksum, flow_control_flag = struct.unpack('!BHHHB', data)
-            if ack_msg_type == 3 and ack_sequence_num == sequence_num:
-                print(f"Métrica '{task['metric_type']}' enviada e confirmada.")
-
-                # Ajustar a frequência com base no controle de fluxo
-                if flow_control_flag == 1:
-                    print("Controle de fluxo recebido: reduzindo frequência de envio.")
-                    frequency += 5  # Aumenta o intervalo de envio
-        else:
-            print(f"ACK inválido recebido: {data}")
-
-
-        if ack_msg_type == 3 and ack_sequence_num == sequence_num:
-            print(f"Métrica '{task['metric_type']}' enviada e confirmada.")
-
-            # Ajustar a frequência com base no controle de fluxo
-            if flow_control_flag == 1:
-                print("Controle de fluxo recebido: reduzindo frequência de envio.")
-                frequency += 5  # Aumenta o intervalo de envio (por exemplo, +5 segundos)
-
-
-        
-        # Verificar limite crítico e enviar alerta
-        if metric_value > task["threshold"]:  # Usa o limite do JSON
-            send_alert(agent_id, metric_type, metric_value, task["threshold"], server_ip, task["tcp_port"])
-
-        sequence_num += 1
-        time.sleep(frequency)
 
 # Enviar alerta com base nas tarefas
 def send_alert(agent_id, metric_type, metric_value, threshold, server_ip, tcp_port):
