@@ -29,7 +29,7 @@
                     "task_id": "task-003",
                     "metric_type": "bandwidth",
                     "frequency": 15,
-                    "threshold": 11,
+                    "threshold": 12,
                     "tcp_port": 5006
                 }
             ]

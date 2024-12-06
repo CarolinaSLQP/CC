@@ -173,5 +173,124 @@
         "metric_value": 13,
         "threshold": 10,
         "timestamp": 1733401710
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 11,
+        "threshold": 10,
+        "timestamp": 1733493552
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 11,
+        "threshold": 10,
+        "timestamp": 1733493737
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 12,
+        "threshold": 10,
+        "timestamp": 1733493932
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 11,
+        "threshold": 10,
+        "timestamp": 1733494139
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 11,
+        "threshold": 10,
+        "timestamp": 1733494354
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 12,
+        "threshold": 10,
+        "timestamp": 1733494579
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 12,
+        "threshold": 10,
+        "timestamp": 1733494814
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 12,
+        "threshold": 11,
+        "timestamp": 1733495008
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 12,
+        "threshold": 11,
+        "timestamp": 1733495023
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 12,
+        "threshold": 11,
+        "timestamp": 1733495038
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 12,
+        "threshold": 11,
+        "timestamp": 1733495053
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 13,
+        "threshold": 11,
+        "timestamp": 1733495068
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 12,
+        "threshold": 11,
+        "timestamp": 1733495083
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 12,
+        "threshold": 11,
+        "timestamp": 1733495109
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 12,
+        "threshold": 11,
+        "timestamp": 1733495144
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 12,
+        "threshold": 11,
+        "timestamp": 1733500313
+    },
+    {
+        "agent_id": 2,
+        "metric_type": 3,
+        "metric_value": 12,
+        "threshold": 11,
+        "timestamp": 1733500333
     }
 ]

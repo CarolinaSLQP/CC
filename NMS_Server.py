@@ -2,6 +2,22 @@ import socket
 import struct
 import collections
 import json
+import subprocess
+import atexit
+
+def start_iperf_server():
+    try:
+        # Inicia o iperf3 como servidor
+        process = subprocess.Popen(['iperf3', '-s'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        print("Servidor iperf3 iniciado.")
+
+        # Certifique-se de parar o servidor iperf3 ao encerrar o programa
+        atexit.register(process.terminate)
+    except Exception as e:
+        print(f"Erro ao iniciar o servidor iperf3: {e}")
+
+# Chamar a função para iniciar o servidor iperf3
+start_iperf_server()
 
 # Configurações do servidor
 UDP_PORT = 5005
