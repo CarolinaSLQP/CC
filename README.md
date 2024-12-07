@@ -1,7 +1,7 @@
 Para testar:
 
-No Server:
+No Server (Em qualquer um dos Pcs):
 python3 NMS_Server.py
 
-No Agent:
-python3 NMS_Agent.py config.json 1
+No Agent(Num ou mais routers á escolha):
+python3 NMS_Agent.py configPCx.json (1 ou 2)
