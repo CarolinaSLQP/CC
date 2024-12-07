@@ -10,13 +10,15 @@
                     "task_id": "task-001",
                     "metric_type": "latency",
                     "frequency": 10,
-                    "threshold": 40  
+                    "threshold": 43,
+                    "tcp_port": 5006
                 },
                 {
                     "task_id": "task-002",
                     "metric_type": "cpu_usage",
                     "frequency": 20,
-                    "threshold": 30  
+                    "threshold": 42,
+                    "tcp_port": 5006
                 }
             ]
         },
@@ -27,7 +29,8 @@
                     "task_id": "task-003",
                     "metric_type": "bandwidth",
                     "frequency": 15,
-                    "threshold": 90  
+                    "threshold": 12,
+                    "tcp_port": 5006
                 }
             ]
         }

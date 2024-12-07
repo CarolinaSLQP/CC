@@ -292,5 +292,103 @@
         "metric_value": 12,
         "threshold": 11,
         "timestamp": 1733500333
+    },
+    {
+        "agent_id": 1,
+        "metric_type": 1,
+        "metric_value": 44,
+        "threshold": 43,
+        "timestamp": 1733585591
+    },
+    {
+        "agent_id": 1,
+        "metric_type": 1,
+        "metric_value": 152,
+        "threshold": 43,
+        "timestamp": 1733585616
+    },
+    {
+        "agent_id": 1,
+        "metric_type": 1,
+        "metric_value": 14,
+        "threshold": 13,
+        "timestamp": 1733588299
+    },
+    {
+        "agent_id": 1,
+        "metric_type": 1,
+        "metric_value": 14,
+        "threshold": 13,
+        "timestamp": 1733588309
+    },
+    {
+        "agent_id": 1,
+        "metric_type": 2,
+        "metric_value": 47,
+        "threshold": 42,
+        "timestamp": 1733588576
+    },
+    {
+        "agent_id": 1,
+        "metric_type": 1,
+        "metric_value": 45,
+        "threshold": 22,
+        "timestamp": 1733588751
+    },
+    {
+        "agent_id": 1,
+        "metric_type": 1,
+        "metric_value": 43,
+        "threshold": 22,
+        "timestamp": 1733588761
+    },
+    {
+        "agent_id": 1,
+        "metric_type": 1,
+        "metric_value": 44,
+        "threshold": 22,
+        "timestamp": 1733588775
+    },
+    {
+        "agent_id": 1,
+        "metric_type": 1,
+        "metric_value": 42,
+        "threshold": 22,
+        "timestamp": 1733588789
+    },
+    {
+        "agent_id": 1,
+        "metric_type": 1,
+        "metric_value": 42,
+        "threshold": 22,
+        "timestamp": 1733588799
+    },
+    {
+        "agent_id": 1,
+        "metric_type": 1,
+        "metric_value": 44,
+        "threshold": 22,
+        "timestamp": 1733588809
+    },
+    {
+        "agent_id": 1,
+        "metric_type": 1,
+        "metric_value": 43,
+        "threshold": 22,
+        "timestamp": 1733588819
+    },
+    {
+        "agent_id": 1,
+        "metric_type": 2,
+        "metric_value": 48,
+        "threshold": 42,
+        "timestamp": 1733588882
+    },
+    {
+        "agent_id": 1,
+        "metric_type": 2,
+        "metric_value": 57,
+        "threshold": 42,
+        "timestamp": 1733589073
     }
 ]
